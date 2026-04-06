@@ -1,0 +1,17 @@
+INDEX VERSION 1.4+/home/maryaalexandre/Área de trabalho/workspace-fluig-changelog/changelog-fluig-main/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+453136022.index
+392735092.index
+3719029172.index
+665161179.index
+737977832.index
+2503394389.index
+935350620.index
+1556784113.index
+1133456504.index
+720423128.index
+2100381250.index
+2794770257.index
+3081286417.index
+2829553908.index
+3893217639.index
+1463674464.index

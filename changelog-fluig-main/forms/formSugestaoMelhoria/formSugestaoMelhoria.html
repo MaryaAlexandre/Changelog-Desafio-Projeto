@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sugestão de Melhoria</title>
+  <link rel="stylesheet" href="form.css" />
+</head>
+
+<body>
+  <form name="frmSugestaoMelhoria" id="frmSugestaoMelhoria">
+
+    <div class="form-header">
+      <h2 class="form-title">Sugestão de Melhoria</h2>
+    </div>
+
+    <fieldset class="form-section">
+      <legend>Dados da Sugestão</legend>
+
+      <div class="form-row">
+        <div class="form-group col-6">
+          <label for="titulo">Título <span class="required">*</span></label>
+          <input
+            type="text"
+            id="titulo"
+            name="titulo"
+            placeholder="Ex.: Melhorar filtro de relatórios"
+          />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-6">
+          <label for="descricao">Descrição <span class="required">*</span></label>
+          <textarea
+            id="descricao"
+            name="descricao"
+            rows="5"
+            placeholder="Descreva a sugestão com detalhes..."
+          ></textarea>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-3">
+          <label for="modulo">Área / Módulo <span class="required">*</span></label>
+          <select id="modulo" name="modulo">
+            <option value="">Selecione...</option>
+            <option value="Portal">Portal</option>
+            <option value="Financeiro">Financeiro</option>
+            <option value="Integracao">Integracao</option>
+            <option value="Mobile">Mobile</option>
+            <option value="Outros">Outros</option>
+          </select>
+        </div>
+
+        <div class="form-group col-3">
+          <label for="tipo">Tipo <span class="required">*</span></label>
+          <select id="tipo" name="tipo">
+            <option value="">Selecione...</option>
+            <option value="melhoria">Melhoria</option>
+            <option value="correcao">Correcao</option>
+            <option value="funcionalidade">Nova funcionalidade</option>
+          </select>
+        </div>
+
+        <div class="form-group col-3">
+          <label for="impacto">Impacto esperado</label>
+          <select id="impacto" name="impacto">
+            <option value="">Selecione...</option>
+            <option value="baixo">Baixo</option>
+            <option value="medio">Medio</option>
+            <option value="alto">Alto</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-6">
+          <label for="beneficio">Benefício / ganho esperado</label>
+          <textarea
+            id="beneficio"
+            name="beneficio"
+            rows="3"
+            placeholder="Explique o ganho esperado com a sugestão"
+          ></textarea>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset class="form-section">
+      <legend>Anexo</legend>
+
+      <div class="file-container" id="divAnexoSugestao">
+        <div class="file-display">
+          <input
+            type="text"
+            class="anexo"
+            id="imagemNome"
+            name="imagemNome"
+            readonly
+            placeholder="Nenhum arquivo selecionado"
+          />
+          <input type="hidden" class="anexoId" id="imagemId" name="imagemId" />
+        </div>
+
+        <div class="file-actions">
+          <button
+            type="button"
+            class="upload-btn btn-outline"
+            data-action="upload"
+            data-extensions=".png,.jpg,.jpeg,.gif,.webp,.pdf"
+          >
+            Upload
+          </button>
+
+          <button
+            type="button"
+            class="trash-btn btn-danger-outline"
+            data-action="trash"
+          >
+            Remover
+          </button>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset class="form-section" id="secao-gestao" style="display:none;">
+      <legend>Gestão da Solicitação</legend>
+
+      <div class="form-row">
+        <div class="form-group col-3">
+          <label for="statusSugestao">Status</label>
+          <input type="text" id="statusSugestao" name="statusSugestao" readonly />
+        </div>
+
+        <div class="form-group col-3">
+          <label for="categoria">Categoria</label>
+          <input type="text" id="categoria" name="categoria" />
+        </div>
+
+        <div class="form-group col-3">
+          <label for="duplicadoDe">Duplicado de</label>
+          <input type="text" id="duplicadoDe" name="duplicadoDe" />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-3">
+          <label for="prioridade">Prioridade</label>
+          <select id="prioridade" name="prioridade">
+            <option value="">Selecione...</option>
+            <option value="P0">P0</option>
+            <option value="P1">P1</option>
+            <option value="P2">P2</option>
+            <option value="P3">P3</option>
+          </select>
+        </div>
+
+        <div class="form-group col-3">
+          <label for="decisao">Decisão</label>
+          <select id="decisao" name="decisao">
+            <option value="">Selecione...</option>
+            <option value="aprovar">Aprovar</option>
+            <option value="backlog">Backlog</option>
+            <option value="reprovar">Reprovar</option>
+          </select>
+        </div>
+
+        <div class="form-group col-3">
+          <label for="responsavelArea">Responsável da área</label>
+          <input type="text" id="responsavelArea" name="responsavelArea" />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-6">
+          <label for="justificativaDecisao">Justificativa da decisão</label>
+          <textarea
+            id="justificativaDecisao"
+            name="justificativaDecisao"
+            rows="4"
+          ></textarea>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-3">
+          <label for="prazoSugerido">Prazo sugerido</label>
+          <input type="date" id="prazoSugerido" name="prazoSugerido" />
+        </div>
+
+        <div class="form-group col-3">
+          <label for="linkItemInterno">Link do item interno</label>
+          <input type="text" id="linkItemInterno" name="linkItemInterno" />
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset class="form-section">
+      <legend>Controle</legend>
+
+      <div class="form-row">
+        <div class="form-group col-3">
+          <label for="solicitanteSugestao">Solicitante</label>
+          <input type="text" id="solicitanteSugestao" name="solicitanteSugestao" readonly />
+        </div>
+
+        <div class="form-group col-3">
+          <label for="emailSolicitante">E-mail do solicitante</label>
+          <input type="text" id="emailSolicitante" name="emailSolicitante" readonly />
+        </div>
+
+        <div class="form-group col-3">
+          <label for="origem">Origem</label>
+          <input type="text" id="origem" name="origem" readonly />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-3">
+          <label for="dataAberturaSugestao">Data de abertura</label>
+          <input type="text" id="dataAberturaSugestao" name="dataAberturaSugestao" readonly />
+        </div>
+
+        <div class="form-group col-3">
+          <label for="dataFechamento">Data de fechamento</label>
+          <input type="text" id="dataFechamento" name="dataFechamento" readonly />
+        </div>
+
+        <div class="form-group col-6">
+          <label for="motivoEncerramento">Motivo do encerramento</label>
+          <input type="text" id="motivoEncerramento" name="motivoEncerramento" readonly />
+        </div>
+         <div class="form-row">
+        <div class="form-group col-6">
+          <label for="tagsSelecionadas">Tags Selecionadas</label>
+          <input type="text" id="tagsSelecionadas" name="tagsSelecionadas" placeholder="login, financeiro,mobile etc"/>
+        </div>
+
+    </fieldset>
+
+    <input type="hidden" id="createdBy" name="createdBy" />
+    <input type="hidden" id="createdDate" name="createdDate" />
+    <input type="hidden" id="updatedBy" name="updatedBy" />
+    <input type="hidden" id="updatedDate" name="updatedDate" />
+
+  </form>
+
+  <script src="custom.js"></script>
+</body>
+</html>
